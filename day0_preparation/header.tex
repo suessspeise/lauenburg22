@@ -1,0 +1,81 @@
+
+
+% SPRACHEN etc..:
+
+\usepackage{textcomp} % \micro und \perthousand. hauptnutzen: gensymb nervt nichtmehr mit warnings...
+\usepackage{verbatim} % für block comments mit: \begin{comment} .... \end{comment}
+
+\usepackage[ngerman, english]{babel}
+\selectlanguage{english}
+\usepackage[utf8]{inputenc}
+
+\usepackage{enumitem,amssymb} % for todo lists
+% https://tex.stackexchange.com/questions/247681/how-to-create-checkbox-todo-list
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+
+
+\usepackage{emoji}
+% list in here: https://mirror.informatik.hs-fulda.de/tex-archive/macros/luatex/latex/emoji/emoji-doc.pdf
+
+
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks=true,
+    linkcolor={black!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black},
+    pdftitle={Overleaf Example},
+}
+    
+    
+
+% BILDER
+\usepackage{graphicx} % Erlaubt, dass der Text um Bild fließt, erlaubt Croppen, erlaubt resize von tabellen etc.
+%\usepackage{subcaption}
+%\usepackage{rotating} % für 90 gedrehte Bilder mit \begin{sidewaysfigure}[ht]....
+\usepackage{pdfpages} % für Bilder im PDF format
+\usepackage{import} % für bilder mit pfaden (oder so?). inkscape hat mir das gesagt
+\usepackage{float}
+\usepackage{subcaption} % subfig is evil!
+\usepackage[section]{placeins} % provides \floatbarrier
+\usepackage{wrapfig}
+
+
+\usepackage{tabularx} % to set tablewidth: \begin{tabularx}{\textwidth}{X|l}
+
+
+
+\usepackage{multicol} % multicol environment für mehrere spalten
+\usepackage{geometry} % Für Einstellen der Seitenränder
+    % normal:
+%    \geometry{a4paper, top=10mm, left=15mm, right=15mm, bottom=10mm, headsep=00mm, footskip=10mm} % wide
+%    \geometry{a4paper, top=20mm, left=15mm, right=15mm, bottom=10mm, headsep=00mm, footskip=12mm}
+
+    \geometry{a4paper, top=20mm, left=20mm, right=20mm, bottom=20mm, headsep=00mm, footskip=12mm}
+                        
+\usepackage{todonotes}
+
+
+
+
+\usepackage{listings} % code listings
+\definecolor{cCodeString}{RGB}{42,0.0,255}
+\definecolor{cCodeKeywordstyle}{RGB}{150,0,150}
+\definecolor{cCodeComment}{RGB}{63,127,95}
+\lstset{language=python,
+    columns=fullflexible,
+    basicstyle=\small\ttfamily,
+    keywordstyle=\color{cCodeKeywordstyle}\bfseries,
+    commentstyle=\color{cCodeComment},
+    stringstyle=\color{cCodeString},
+}
+\definecolor{light-gray}{gray}{0.95}
+\lstset{basicstyle=\linespread{1.1}\ttfamily\footnotesize,
+    backgroundcolor=\color{light-gray}, xleftmargin=0.7cm,
+    frame=tlbr, framesep=0.2cm, framerule=0pt,
+} % background color for listings
+% for a single word this works quite well:
+\newcommand\code[1]{\textbf{\texttt{#1}}}

@@ -1,0 +1,97 @@
+\documentclass{article}
+\input{header.tex}
+
+\title{Get ready for Lauenburg}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+The aim of this guide is to help you set up a jupyter notebook on your laptop. Links to different methods are presented. Feel free to approach this problem in any other way, as long as you will have a jupyter notebook ready for the days in Lauenburg.
+
+
+\subsection*{\emoji{pencil} To do}
+
+\begin{todolist}
+  \item Install a conda package manager
+  \item Install jupyter
+  \item Install the essential packages
+  \item Familiarize yourself with \code{git}
+  \item (Familiarize yourself with \code{vim})
+\end{todolist}
+
+
+
+\subsection*{\emoji{snake} Anaconda} 
+
+Anaconda is a python distribution based on the conda package manager. Follow the \href{https://docs.anaconda.com/anaconda/install/index.html}{install guide} provided by the project. Ready made installers are provided for the most common operating systems. There is also a lightweight version, called \href{https://docs.conda.io/en/latest/miniconda.html}{miniconda}. but if you are new to this, go with anaconda.
+
+\vspace{2mm}
+
+\noindent For users of \textbf{Homebrew}: 
+
+
+\noindent There might be issues with the parallel usage of \code{conda} and \code{brew}. \href{https://stackoverflow.com/questions/42859781/best-practices-with-anaconda-and-brew}{They can be solved, though}.
+
+\vspace{2mm}
+
+\noindent For users of a \textbf{new MacBook}: 
+
+\noindent If you have an M1 processor, there might be issues because it has another architecture than most common processors. You might want to look into these articles describing work arounds: \href{https://www.stuartellis.name/articles/mac-setup/}{1}, \href{https://dev.to/courier/tips-and-tricks-to-setup-your-apple-m1-for-development-547g}{2}, \href{https://codeburst.io/my-ultimate-m1-mac-developer-setup-cfdb2daeed2d}{3}.
+
+
+
+
+\subsection*{\emoji{bookmark-tabs} Notebook / Lab} 
+
+To install jupyter notebook 
+\begin{lstlisting}[language=bash]
+conda create -n <name>
+conda activate <name>
+conda install jupyterlab
+\end{lstlisting}
+and run with:
+\begin{lstlisting}[language=bash]
+jupyter notebook
+\end{lstlisting}
+
+Alternatively use the command \code{jupyter lab} to start the newer, more IDE-like user interface that combines the notebook with a file browser and other elements.
+Most of you might finding themselves spending most of their time working with a notebook hosted on a HPC system (\href{http://jupyterhub.dkrz.de/}{jupyterhub.dkrz.de}). Nevertheless it is useful to have a local notebook set up. Levante is not always available.
+
+
+\clearpage
+
+\subsection*{\emoji{package} Packages}
+
+You just installed a very handy package manager: \code{conda}. There is another one, which you might already know: \code{pip}. \code{conda} \href{https://stackoverflow.com/questions/20994716/what-is-the-difference-between-pip-and-conda}{does a bit more} and it it thus preferred to use \code{conda}. If a package is only available via pip, use pip. 
+Installing a package is straightforward. If you know the package name, just try the following (here with numpy):
+\begin{lstlisting}[language=bash]
+conda install numpy
+\end{lstlisting}
+
+The essential packages for the weekend will be: \code{numpy}, \code{matplotlib} and \code{xarray}. If you are already addicted to python packages, these are the ones we will use in examples: \code{intake}, \code{pandas}, \code{scipy}, \code{datashader}, \code{dask} and \code{cartopy}.
+
+
+
+
+\subsection*{\emoji{hammer-and-wrench} Additional tools} 
+\begin{itemize}
+    \item \textbf{IDE}: An integrated development environment (IDE) is a fancy text editor with many added features for software development. It usually has build automation tools and a debugger. The community (free) edition of PyCharm is a powerful IDE for Python. You can install packages through the IDE and it has many plugins (e.g. \textit{CodeTogether} for collaborative coding).
+    
+    \item \textbf{git}: is software for tracking changes in any set of files. Even if you never make a branch, git is still useful, e.g. to make backups of your code. A github account can help you synchronise your notebooks over various machines. The DKRZ also provides a \href{https://docs.dkrz.de/doc/software\%26services/gitlab-git-repository-manager.html}{git system}. If you have no clue what git is, go through \href{https://medium.com/cassandra-cryptoassets/git-basics-a-step-by-step-tutorial-c3098934fa95}{some basic tutorial}.
+    
+    
+    \item \textbf{text editor}: sooner or later you will find yourself wanting to edit a file in the terminal. \code{nano} is an easy editor, but others are much more convenient once you know how to use them. it may be worthwhile to familiarize yourself with \code{vim} a little. Try the build-in \code{vimtutor} command in your terminal, or maybe \href{https://vim-adventures.com/}{a game}.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+\end{document}
