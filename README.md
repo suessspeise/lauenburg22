@@ -9,6 +9,6 @@ This is a collection of material for the lauenburg 2022 pre-intro course.
  * [This pad](https://pad.gwdg.de/GSW4dgHZSGm6KUev6mQcdw?view#) is an in depth guide on using the VS code IDE to work on levante (Shout out to Quan Lio!).
 
 ### Authors:
-day0: Hernan Campos
-day1: Hernan Campos, David Greenberg
-day2: Angel Peinado
+ * day0: Hernan Campos
+ * day1: Hernan Campos, David Greenberg
+ * day2: Angel Peinado
